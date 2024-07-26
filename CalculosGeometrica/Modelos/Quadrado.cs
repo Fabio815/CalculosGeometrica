@@ -9,12 +9,12 @@ internal class Quadrado : Menu
         ExibirTitulo("Calculo do quadrado");
 
         Console.Write("Digite\nBase: ");
-        int baseQuadrado = int.Parse(Console.ReadLine());
+        double baseQuadrado = Convert.ToDouble(Console.ReadLine());
 
         Console.Write("Altura: ");
-        int alturaQuadrado = int.Parse(Console.ReadLine());
+        double alturaQuadrado = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine($"A área do quadradro é : {baseQuadrado * alturaQuadrado}cm.");
+        Console.WriteLine($"A área do quadradro é : {(baseQuadrado * alturaQuadrado).ToString("F")}cm.");
         Console.WriteLine("Digite qualquer tecla para voltar");
         Console.ReadKey();
     }

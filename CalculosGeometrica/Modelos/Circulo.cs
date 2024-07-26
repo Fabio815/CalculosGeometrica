@@ -12,7 +12,7 @@ internal class Circulo : Menu
 
         double area = Math.Pow(raio, 2) * Math.PI;
 
-        Console.WriteLine($"A área do círculo é {area}cm");
+        Console.WriteLine($"A área do círculo é {area.ToString("F")}cm");
         Console.WriteLine("Digite qualquer tecla para voltar");
         Console.ReadKey();
     }

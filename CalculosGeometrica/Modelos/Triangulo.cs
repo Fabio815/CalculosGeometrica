@@ -9,12 +9,12 @@ internal class Triangulo : Menu
         ExibirTitulo("Calculo do triângulo");
 
         Console.Write("Digite\nBase: ");
-        int baseQuadrado = int.Parse(Console.ReadLine());
+        double baseQuadrado = Convert.ToDouble(Console.ReadLine()); ;
 
         Console.Write("Altura: ");
-        int alturaQuadrado = int.Parse(Console.ReadLine());
+        double alturaQuadrado = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine($"A área do triângulo é : {(baseQuadrado * alturaQuadrado) / 2}cm.");
+        Console.WriteLine($"A área do triângulo é : {((baseQuadrado * alturaQuadrado) / 2).ToString("F")}cm.");
         Console.WriteLine("Digite qualquer tecla para voltar");
         Console.ReadKey();
     }
