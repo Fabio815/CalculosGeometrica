@@ -1,4 +1,5 @@
-﻿using CalculosGeometrica.Modelos;
+﻿using CalculosGeometrica.Menu;
+using CalculosGeometrica.Modelos;
 
 
 void MenuPrincipal()
@@ -10,17 +11,17 @@ void MenuPrincipal()
     switch (opcao)
     {
         case 1:
-            Quadrado quadrado = new();
+            MenuQuadrado quadrado = new();
             quadrado.Executar();
             MenuPrincipal();
             break;
         case 2:
-            Triangulo triangulo = new Triangulo();
+            MenuTriangulo triangulo = new MenuTriangulo();
             triangulo.Executar();
             MenuPrincipal();
             break;
         case 3:
-            Circulo circulo = new Circulo();
+            MenuCirculo circulo = new();
             circulo.Executar();
             MenuPrincipal();
             break;

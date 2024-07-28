@@ -1,6 +1,12 @@
-﻿namespace CalculosGeometrica.Modelos;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Menu()
+namespace CalculosGeometrica.Menu;
+
+internal class Menu
 {
     public void ExibirTitulo(string titulo)
     {

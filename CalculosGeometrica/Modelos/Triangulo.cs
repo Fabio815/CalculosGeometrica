@@ -1,21 +1,21 @@
 ﻿using CalculosGeometrica.Modelos;
 
-internal class Triangulo : Menu
+internal class Triangulo : IFormas
 {
-    public override void Executar()
+    public Triangulo(double _base, double altura)
     {
-        base.Executar();
+        Altura = altura;
+        Base = _base;
+    }
+    public double Base { get; set; }
+    public double Altura { get; set; }
 
-        ExibirTitulo("Calculo do triângulo");
-
-        Console.Write("Digite\nBase: ");
-        double baseQuadrado = Convert.ToDouble(Console.ReadLine()); ;
-
-        Console.Write("Altura: ");
-        double alturaQuadrado = Convert.ToDouble(Console.ReadLine());
-
-        Console.WriteLine($"A área do triângulo é : {((baseQuadrado * alturaQuadrado) / 2).ToString("F")}cm.");
-        Console.WriteLine("Digite qualquer tecla para voltar");
-        Console.ReadKey();
+    public double CalcularArea()
+    {
+        return (Base * Altura) / 2;
+    }
+    public double CalcularPerimetro()
+    {
+        return Altura * 2 + Base;
     }
 }

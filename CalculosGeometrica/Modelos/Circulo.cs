@@ -1,19 +1,22 @@
 ﻿
 using CalculosGeometrica.Modelos;
 
-internal class Circulo : Menu
+public class Circulo : IFormas
 {
-    public override void Executar()
+    public Circulo(double raio)
     {
-        base.Executar();
-        ExibirTitulo("Calculo do círculo");
-        Console.WriteLine("Digite o raio do círculo: ");
-        double raio = Convert.ToDouble(Console.ReadLine());
+        Raio = raio;
+    }
 
-        double area = Math.Pow(raio, 2) * Math.PI;
+    public double Raio { get; }
 
-        Console.WriteLine($"A área do círculo é {area.ToString("F")}cm");
-        Console.WriteLine("Digite qualquer tecla para voltar");
-        Console.ReadKey();
+    public double CalcularPerimetro()
+    {
+        return 2 * Math.PI * Raio;
+    }
+
+    public double CalcularArea()
+    {
+        return Math.Pow(Raio, 2) * Math.PI;
     }
 }

@@ -1,21 +1,21 @@
 ﻿using CalculosGeometrica.Modelos;
 
-internal class Quadrado : Menu
+internal class Quadrado : IFormas
 {
-    public void Executar()
+    public Quadrado(double _base)
     {
-        base.Executar();
+        Base = _base;
+    }
 
-        ExibirTitulo("Calculo do quadrado");
+    public double Base { get; set; }
 
-        Console.Write("Digite\nBase: ");
-        double baseQuadrado = Convert.ToDouble(Console.ReadLine());
+    public double CalcularArea()
+    {
+        return Base * Base;
+    }
 
-        Console.Write("Altura: ");
-        double alturaQuadrado = Convert.ToDouble(Console.ReadLine());
-
-        Console.WriteLine($"A área do quadradro é : {(baseQuadrado * alturaQuadrado).ToString("F")}cm.");
-        Console.WriteLine("Digite qualquer tecla para voltar");
-        Console.ReadKey();
+    public double CalcularPerimetro()
+    {
+        return 4 * Base;
     }
 }
